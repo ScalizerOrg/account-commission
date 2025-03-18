@@ -70,7 +70,7 @@ class AccountMove(models.Model):
     def action_post(self):
         """Put settlements associated to the invoices in invoiced state."""
         self.mapped("line_ids.settlement_id").write({"state": "invoiced"})
-        return super().action_post()
+        return super(AccountMove, self).action_post()
 
     def button_cancel(self):
         """Check settled lines and put settlements associated to the invoices in
