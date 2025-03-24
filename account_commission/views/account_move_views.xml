@@ -86,9 +86,7 @@
             </xpath>
             <!-- Needed for fields in invoice lines to be saved -->
             <xpath expr="//field[@name='line_ids']/list" position="inside">
-<!--                <field name="settlement_id" column_invisible="1" />-->
                 <field name="commission_free" column_invisible="1" />
-<!--                <field name="any_settled" column_invisible="1" />-->
                 <field name="commission_status" column_invisible="1" />
             </xpath>
             <field name="tax_totals" position="after">
